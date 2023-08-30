@@ -1,6 +1,7 @@
+import axios from "axios"
+import { useState, useRef } from "react"
 import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
 import { Button } from "../components/Button/Button.style"
-import { useState, useRef } from "react"
 import { Auth } from "../types/payload"
 
 const Register = () => {
@@ -12,8 +13,25 @@ const Register = () => {
         password: "",
     })
 
-    const handler = () => {
-        console.log("Testing...")
+    const handler = async() => {
+        let emailVal = emailInput.current.value
+        let passwordVal = passwordInput.current.value
+
+        setAuthState({
+            email: emailVal,
+            password: passwordVal,
+        })
+
+        try {
+           const res = axios.post("http://ec2-3-113-2-184.ap-northeast-1.compute.amazonaws.com/api/v1/auth/signup", {
+            email: authState.email,
+            password: authState.password,
+           })
+
+           console.log(res)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     return (
