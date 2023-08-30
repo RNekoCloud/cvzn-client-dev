@@ -1,10 +1,12 @@
-import { CardContainer } from "../components/Card/Card.style"
+import { CardContainer, Card } from "../components/Card/Card.style"
 
 const Register = () => {
     return (
         <>
             <CardContainer>
-                <h1>Register</h1>
+                <Card>
+                    <h1>Register</h1>
+                </Card>
             </CardContainer>
         </>
     )
