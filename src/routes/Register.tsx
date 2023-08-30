@@ -8,7 +8,11 @@ const Register = () => {
                 <Card>
                     <CardTitle>Register</CardTitle>
                     <InputTitle>Email</InputTitle>
-                    <InputText></InputText>
+                    <InputText />
+                    <InputTitle>Password</InputTitle>
+                    <InputText />
+                    <InputTitle>Password Confirmation</InputTitle>
+                    <InputText />
                 </Card>
             </CardContainer>
         </>
