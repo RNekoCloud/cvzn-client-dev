@@ -7,12 +7,12 @@ const Register = () => {
             <CardContainer>
                 <Card>
                     <CardTitle>Register</CardTitle>
-                    <InputTitle>Email</InputTitle>
-                    <InputText />
-                    <InputTitle>Password</InputTitle>
-                    <InputText />
-                    <InputTitle>Password Confirmation</InputTitle>
-                    <InputText />
+                    <label htmlFor="" className="form__label">Email</label>
+                    <input type="text" className="form__input" />
+                    <label htmlFor="" className="form__label">Password</label>
+                    <input type="password" className="form__input" />
+                    <label htmlFor="" className="form__label">Password Confirmation</label>
+                    <input type="password" className="form__input" />
                 </Card>
             </CardContainer>
         </>
