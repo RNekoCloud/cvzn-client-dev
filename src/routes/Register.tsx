@@ -1,4 +1,5 @@
 import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
+import { InputTitle } from "../components/Input/Input.style"
 
 const Register = () => {
     return (
@@ -6,6 +7,7 @@ const Register = () => {
             <CardContainer>
                 <Card>
                     <CardTitle>Register</CardTitle>
+                    <InputTitle>Email</InputTitle>
                 </Card>
             </CardContainer>
         </>
