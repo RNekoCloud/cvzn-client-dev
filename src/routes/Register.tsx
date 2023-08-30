@@ -2,6 +2,10 @@ import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
 import { Button } from "../components/Button/Button.style"
 
 const Register = () => {
+    const handler = () => {
+        console.log("yeaaa")
+    }
+
     return (
         <>
             <CardContainer>
@@ -13,7 +17,7 @@ const Register = () => {
                     <input type="password" className="form__input" />
                     <label htmlFor="" className="form__label">Password Confirmation</label>
                     <input type="password" className="form__input" />
-                    <Button>Register</Button>
+                    <Button onClick={handler}>Register</Button>
                 </Card>
             </CardContainer>
         </>
