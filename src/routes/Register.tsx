@@ -1,5 +1,5 @@
 import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
-import { InputTitle } from "../components/Input/Input.style"
+import { InputTitle, InputText } from "../components/Input/Input.style"
 
 const Register = () => {
     return (
@@ -8,6 +8,7 @@ const Register = () => {
                 <Card>
                     <CardTitle>Register</CardTitle>
                     <InputTitle>Email</InputTitle>
+                    <InputText></InputText>
                 </Card>
             </CardContainer>
         </>
