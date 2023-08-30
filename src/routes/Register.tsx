@@ -1,5 +1,4 @@
 import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
-import { InputTitle, InputText } from "../components/Input/Input.style"
 
 const Register = () => {
     return (
