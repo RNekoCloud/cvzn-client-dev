@@ -3,6 +3,7 @@ import axios from "axios"
 import { RegisterData } from "../types/payload"
 import { CardContainer, Card, CardTitle } from "../components/Card/Card.style"
 import { Button } from "../components/Button/Button.style"
+import { PopupWrapper, PopupMsg } from "../components/Popup/Popup.style"
 
 const Register = () => {
     const [data, setData] = useState<RegisterData>({
@@ -33,6 +34,9 @@ const Register = () => {
             <CardContainer>
                 <Card>
                     <CardTitle>Register</CardTitle>
+		    <PopupWrapper>
+			<PopupMsg>Sample Error</PopupMsg>
+		    </PopupWrapper>
                     <label htmlFor="" className="form__label">Email</label>
                     <input type="text" className="form__input" name="email"  onChange={handleChange} value={data.email} />
                     <label htmlFor="" className="form__label">Password</label>
