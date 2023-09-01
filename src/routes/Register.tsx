@@ -40,6 +40,8 @@ const Register = () => {
                     <label htmlFor="" className="form__label">Password Confirmation</label>
                     <input type="password" className="form__input" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
                     <Button onClick={handleBtn}>Register</Button>
+		    <p className="text__center">Atau</p>
+		    <Button>Login dengan Google</Button>
                 </Card>
             </CardContainer>
         </>
