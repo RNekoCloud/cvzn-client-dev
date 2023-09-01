@@ -20,7 +20,12 @@ const Register = () => {
     }
 
     const handleBtn = async() => {
-       console.log()
+       const res = await axios.post("http://ec2-3-113-2-184.ap-northeast-1.compute.amazonaws.com/api/v1/auth/signup", {
+        email: data.email,
+        password: data.password,
+       })
+
+       console.log(res)
     }
 
     return (
@@ -29,11 +34,11 @@ const Register = () => {
                 <Card>
                     <CardTitle>Register</CardTitle>
                     <label htmlFor="" className="form__label">Email</label>
-                    <input type="text" className="form__input" onChange={handleChange} value={data.email} />
+                    <input type="text" className="form__input" name="email"  onChange={handleChange} value={data.email} />
                     <label htmlFor="" className="form__label">Password</label>
-                    <input type="password" className="form__input" onChange={handleChange} value={data.password} />
+                    <input type="password" className="form__input" name="password" onChange={handleChange} value={data.password} />
                     <label htmlFor="" className="form__label">Password Confirmation</label>
-                    <input type="password" className="form__input" onChange={handleChange} value={data.confirmationPassword} />
+                    <input type="password" className="form__input" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
                     <Button onClick={handleBtn}>Register</Button>
                 </Card>
             </CardContainer>
