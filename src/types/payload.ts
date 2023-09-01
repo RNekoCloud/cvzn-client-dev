@@ -3,7 +3,7 @@ export interface Auth {
     password: string
 }
 
-export interface Register {
+export interface RegisterData {
     email: string,
     password: string,
     confirmationPassword: string,
