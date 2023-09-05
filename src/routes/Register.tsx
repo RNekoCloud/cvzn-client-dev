@@ -12,6 +12,8 @@ const Register = () => {
         confirmationPassword: "",
     })
 
+    const [showMessage, setShowMessage] = useState<boolean>(false)
+
     const handleChange = (e: any) => {
         const val = e.target.value
         setData({
