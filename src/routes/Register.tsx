@@ -36,9 +36,11 @@ const Register = () => {
             <CardContainer>
                 <Card>
                     <CardTitle>Register</CardTitle>
+		    {showMessage && 
 		    <PopupWrapper>
 			<PopupMsg>Sample Error</PopupMsg>
 		    </PopupWrapper>
+		    }
                     <label htmlFor="" className="form__label">Email</label>
                     <input type="text" className="form__input" name="email"  onChange={handleChange} value={data.email} />
                     <label htmlFor="" className="form__label">Password</label>
