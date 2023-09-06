@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Register from './routes/Register.tsx'
+import Validator from './routes/Validator.tsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/validate/:token",
+    element: Validator,
   }
 ])
 

@@ -27,8 +27,13 @@ const Register = () => {
         email: data.email,
         password: data.password,
        })
+       
+    }
 
-       console.log(res)
+    const handleLogin = (e) => {
+		// Should be redirect into Google Oauth
+		e.preventDefault()
+		window.location.replace("http://localhost:8080/auth/google")
     }
 
     return (
@@ -49,7 +54,7 @@ const Register = () => {
                     <input type="password" className="form__input" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
                     <Button onClick={handleBtn}>Register</Button>
 		    <p className="text__center">Atau</p>
-		    <Button>Login dengan Google</Button>
+		    <Button onClick={handleLogin}>Login dengan Google</Button>
                 </Card>
             </CardContainer>
         </>
