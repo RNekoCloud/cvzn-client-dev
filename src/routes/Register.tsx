@@ -47,11 +47,11 @@ const Register = () => {
 		    </PopupWrapper>
 		    }
                     <label htmlFor="" className="form__label">Email</label>
-                    <input type="text" className="form__input" name="email"  onChange={handleChange} value={data.email} />
+                    <input type="text" className="form__input" placeholder="Enter your email" name="email"  onChange={handleChange} value={data.email} />
                     <label htmlFor="" className="form__label">Password</label>
-                    <input type="password" className="form__input" name="password" onChange={handleChange} value={data.password} />
+                    <input type="password" className="form__input" placeholder="Minimum 8 characters" name="password" onChange={handleChange} value={data.password} />
                     <label htmlFor="" className="form__label">Password Confirmation</label>
-                    <input type="password" className="form__input" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
+                    <input type="password" className="form__input" placeholder="Should be same as above" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
                     <Button onClick={handleBtn}>Register</Button>
 		    <p className="text__center">Atau</p>
 		    <Button onClick={handleLogin}>Login dengan Google</Button>
