@@ -13,6 +13,7 @@ const Register = () => {
     })
 
     const [showMessage, setShowMessage] = useState<boolean>(false)
+    const [msg, setMsg] = useState<string>("")
 
     const handleChange = (e: any) => {
         const val = e.target.value
@@ -28,8 +29,14 @@ const Register = () => {
         password: data.password,
        })
 
-       console.log(res)
-       
+       if (data.password !== data.confirmationPassword) {
+         setShowMessage(true)
+         setMsg("You should confirmate your password")
+         return
+       }
+      
+      setMsg(res.data.message)
+      setShowMessage(true) 
     }
 
     const handleLogin = (e: any) => {
@@ -43,11 +50,11 @@ const Register = () => {
             <CardContainer>
                 <Card>
                     <CardTitle>Register</CardTitle>
-		    {showMessage && 
-		    <PopupWrapper>
-			<PopupMsg>Sample Error</PopupMsg>
-		    </PopupWrapper>
-		    }
+		        {showMessage && 
+		        <PopupWrapper>
+			      <PopupMsg>{ msg }</PopupMsg>
+		        </PopupWrapper>
+		      }
                     <label htmlFor="" className="form__label">Email</label>
                     <input type="text" className="form__input" placeholder="Enter your email" name="email"  onChange={handleChange} value={data.email} />
                     <label htmlFor="" className="form__label">Password</label>
@@ -55,8 +62,8 @@ const Register = () => {
                     <label htmlFor="" className="form__label">Password Confirmation</label>
                     <input type="password" className="form__input" placeholder="Should be same as above" name="confirmationPassword" onChange={handleChange} value={data.confirmationPassword} />
                     <Button onClick={handleBtn}>Register</Button>
-		    <p className="text__center">Atau</p>
-		    <Button onClick={handleLogin}>Login dengan Google</Button>
+		                <p className="text__center">Atau</p>
+		                <Button onClick={handleLogin}>Login dengan Google</Button>
                 </Card>
             </CardContainer>
         </>
