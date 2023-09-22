@@ -21,11 +21,7 @@ app.post("/api/v1/auth/signup", async(req, res) => {
     })
  
   } catch(err) {
-    console.log(err)
-    res.json({
-      message: register.data.message,
-      status: register.data.status
-    })
+    console.log(err) 
   }
 
  
