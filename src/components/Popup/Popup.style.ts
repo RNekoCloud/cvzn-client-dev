@@ -5,8 +5,8 @@ export const PopupWrapper = styled.div`
     margin: 5px;
 `
 
-export const PopupMsg = styled.p<{$success?: boolean}>`
-    color: ${props => props.$success ? "#A8DF8E" : "red"};
+export const PopupMsg = styled.p`
+    color: red;
     font-size: 13px;
     margin: 5px;
 `
