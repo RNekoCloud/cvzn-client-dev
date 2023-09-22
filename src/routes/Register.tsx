@@ -23,14 +23,16 @@ const Register = () => {
     }
 
     const handleBtn = async() => {
-       const res = await axios.post("http://ec2-3-113-2-184.ap-northeast-1.compute.amazonaws.com/api/v1/auth/signup", {
+       const res = await axios.post("/api/v1/auth/signup", {
         email: data.email,
         password: data.password,
        })
+
+       console.log(res)
        
     }
 
-    const handleLogin = (e) => {
+    const handleLogin = (e: any) => {
 		// Should be redirect into Google Oauth
 		e.preventDefault()
 		window.location.replace("http://localhost:8080/auth/google")

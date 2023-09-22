@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/validate/:token",
-    element: Validator,
+    element: <Validator />,
   }
 ])
 
