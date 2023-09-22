@@ -1,5 +1,7 @@
+const axios = require("axios")
 const express = require("express")
 const bodyParser = require("body-parser")
+
 
 const app = express()
 
@@ -7,11 +9,19 @@ app.use("*", express.static(__dirname))
 app.use(bodyParser.json())
 
 
-app.post("/api/v1/auth/signup", (req, res) => {
-    res.json({
-      message: "Successfully adding data",
-      email: req.body.email
-    }) 
+app.post("/api/v1/auth/signup", async(req, res) => {
+
+  const register = await axios.post("http://localhost:8080/api/v1/auth/signup", {
+    email: req.body.email,
+    password: req.body.password
+  })
+
+  res.json({
+      message: register.data.message,
+      status: register.data.status
+    })
+
+    
 })
 
 app.get("/redirect", (req, res) => {
