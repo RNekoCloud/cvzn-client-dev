@@ -52,7 +52,7 @@ const Register = () => {
                     <CardTitle>Register</CardTitle>
 		        {showMessage && 
 		        <PopupWrapper>
-			      <PopupMsg>{ msg }</PopupMsg>
+			      <PopupMsg $success>{ msg }</PopupMsg>
 		        </PopupWrapper>
 		      }
                     <label htmlFor="" className="form__label">Email</label>
